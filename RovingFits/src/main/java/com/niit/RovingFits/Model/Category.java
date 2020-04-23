@@ -13,6 +13,7 @@ public class Category {
 	int category_Id;
 	@Column(nullable = false, unique = true)
 	String category_Name;
+
 	@Column(nullable = false)
 
 	public int getCategory_Id() {

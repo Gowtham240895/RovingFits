@@ -5,22 +5,30 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Address {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int address_Id;
+	
 	@Column(nullable = false)
 	String address_Name;
+	
 	@Column(nullable = false)
 	String address_Line1;
+	
 	@Column(nullable = false)
 	String address_Line2;
+	
 	@Column(nullable = false)
 	String address_Area;
-	@Column(nullable = false)
+	
+	@ManyToOne
 	Customer address_customer;
+	
 	@Column(nullable = false)
 	int address_pincode;
 
